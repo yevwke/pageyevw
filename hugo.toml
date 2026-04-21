@@ -1,4 +1,5 @@
-baseURL = "https://yevwke.github.io/pageyevw/"
+#baseURL = "/"
+relativeURLs = true
 languageCode = "ru-RU"
 theme = "glim-midnight"
 
