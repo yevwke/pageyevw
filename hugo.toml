@@ -1,0 +1,14 @@
+baseURL = "https://yevwke.github.io/yevwpage/"
+languageCode = "ru-RU"
+theme = "glim-midnight"
+
+[params]
+    title = "yevwke"
+    links = [
+    {name = "Telegram", url = "https://t.me/yevwke/", newTab = true},  
+    {name = "Boosty", url = "https://boosty.to/yevwke/", newTab = true},    
+    {name = "Artstation", url = "https://www.artstation.com/yevwke/", newTab = true},
+    {name = "Itch.io", url = "https://yevwke.itch.io/", newTab = true},    
+    ] 
+    backgroundVideo = "bg.mp4"
+    footer = "<a href='https://pay.cloudtips.ru/p/f058ddd9/' target='_blank'>Поблагодарить❤️</a>"
