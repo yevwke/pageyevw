@@ -12,4 +12,4 @@ theme = "glim-midnight"
     {name = "Itch.io", url = "https://yevwke.itch.io/", newTab = true},    
     ] 
     backgroundVideo = "bg.mp4"
-    footer = "<a href='https://pay.cloudtips.ru/p/f058ddd9/' target='_blank'>Поблагодарить❤️</a>"
+    footer = "<a href='https://pay.cloudtips.ru/p/f058ddd9/' target='_blank'>Угостить кофе❤️</a>"
