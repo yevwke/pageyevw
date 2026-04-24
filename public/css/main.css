@@ -95,13 +95,16 @@
 }
 
 .contentbtn.alt {
-    
+    container-type: inline-size;
      /*background: rgba(218, 17, 17, 0.5);*/
     padding: 10px;
     justify-content: center;
     display: grid !important; /*!important;*/
     grid-template-columns: repeat(2, 1fr); /* Ровно 2 колонки равной ширины */
     gap: 10px; /* Расстояние между кнопками */
+    max-width: 90vw;
+    width: 400px;
+    box-sizing: border-box;
     /* justify-items: center; /* Опционально: центрирование кнопок в ячейках */
     
 }
@@ -113,15 +116,30 @@
     background-size: cover; /* Заполняет весь элемент */
     background-position: center;
     background-repeat: no-repeat;
-    width: 190px; 
-    height: 230px;
+    width: 100%; /* Занимает полную ширину ячейки grid */
+    aspect-ratio: 190 / 230; 
+    background-color: #242424;
     border-color: #ffffff2a;
     border-radius: 5px;
     text-decoration: none;
     transition: all 0.15s ease;
     color: #fff; /* Цвет текста */
     text-shadow: 0 0 3px #000; /* Тень для видимости на фоне */
+
 }
+
+.contentbtn.alt a span {
+    display: flex; /* Flex для внутреннего выравнивания */
+    align-items: flex-end; /* Текст внизу span */
+    justify-content: center; /* Горизонтальное центрирование */
+    font-size: 4cqw;
+    display: block;                  /* Блочный элемент (на всю ширину) */
+    text-align: center;  
+    width: 80%; 
+    max-width: 90%; 
+    min-height: 2.5em; /* Высота ~2 строки, текст поднимается для 1 строки */
+    line-height: 1.2; /* Для читаемости */
+    }
 
 .contentbtn.alt a img {
   
@@ -210,3 +228,23 @@ footer a:hover {
         height: 100vh !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    body, html {
+        overscroll-behavior: none; /* Предотвращает overscroll (сдвиг за пределы) */
+        touch-action: manipulation; /* Ограничивает touch-жесты, предотвращает нежелательный scroll */
+    }
+
+    .content {
+        position: fixed; /* Фиксирует content относительно viewport, как фон */
+        top: 8%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow-y: auto; /* Вертикальный скролл, если content > viewport */
+        overflow-x: hidden; /* Без горизонтального скролла */
+    }
+
+    
+}
+

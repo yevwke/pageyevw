@@ -48,7 +48,7 @@ function setMode(mode) {
             defaultBtn.style.display = 'none';
             altBtn.style.display = 'block';
             altBtn.classList.add('alt');
-            toggleBtn.textContent = 'назад';
+            toggleBtn.textContent = '⬸ назад';
         } else {
             defaultBtn.style.display = 'block';
             altBtn.style.display = 'none';
