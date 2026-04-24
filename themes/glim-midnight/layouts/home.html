@@ -18,9 +18,9 @@
                         <h3 class='contentheading'>{{ .Site.Params.title }}</h3>
                     </div>
                     <div class='contenttypewritter animatedText'></div>
-                    <div class='contentbtn'>
+                    <div class='contentbtn' id='default-buttons'>
                         {{ range .Site.Params.links }}
-                            <a href="{{ .url }}" class='btn btn-outline-light' role='button' 
+                            <a href="{{ .url }}" class='btn btn-outline-light' role='button'
                                 {{ if or (.newTab | default false) }}
                                     target="_blank"
                                 {{ else }}
@@ -28,7 +28,30 @@
                                 {{ end }}
                             >{{ .name }}</a>
                         {{ end }}
-                      </div>
+                    </div>
+                    <div class='contentbtn' id='alt-buttons' style='display:none;'>
+                         {{ range .Pages }}
+        {{ if .Params.buttons }}
+            {{ range .Params.buttons }}
+                <a href="{{ .url }}" class='btn btn-outline-light' role='button'
+                    {{ if or (.newTab | default false) }}
+                        target="_blank"
+                    {{ else }}
+                        target="_self"
+                    {{ end }}
+                    {{ if .image }}
+                        style="background-image: url('{{ .image | relURL }}');"
+                    {{ end }}
+                >
+                    <span>{{ .name }}</span>
+                                    </a>
+                                {{ end }}
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                    <div class='contenttoggle'>
+                        <a href="#" id="toggle-btn" class="toggle-link">Всякие проекты</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -36,7 +59,7 @@
 
     <!-- JS for typewritter -->
     <script>
-        const textArray = {{ .Site.Params.phrases | jsonify | safeJS }};
+        const textArray = {{ .Site.Params.phrases | default slice | jsonify | safeJS }};
     </script>
     <script src='/js/script.js'></script>
 {{ end }}

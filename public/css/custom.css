@@ -1,4 +1,4 @@
-.card-grid {
+/* .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
@@ -38,3 +38,30 @@
   font-size: 1em;
   color: lightgray;
 }
+*/
+
+
+/* Buttons for projects only */
+
+/* 
+#alt-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 10px;
+    justify-content: center;
+}
+#alt-buttons a {
+    border-radius: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 150px;
+    height: 200px;
+    letter-spacing: .025em;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 0 1px #fff;
+    transition: all .15s ease;
+    padding-bottom: 10px;
+}
+*/
